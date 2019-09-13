@@ -32,3 +32,6 @@ This repository contains a basic demonstration and boilerplate for `MassiveJS`. 
     - `put('/api/class/:id`
     - `delete('/api/class/:id`
 
+## Schema
+
+Drop the `seed.sql` file into SQL Tabs to get the appropriate table schema and dummy data.
