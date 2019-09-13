@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-export default props => {
-  const [name, changeName] = useState(props.name)
-  const [address, changeAddress] = useState(props.address)
-  const [phone, changePhone] = useState(props.phone)
+export default ({ addFn }) => {
+  const [name, changeName] = useState('')
+  const [address, changeAddress] = useState('')
+  const [phone, changePhone] = useState('')
 
   const addPerson = () => {
-    props.addFn({ name, address, phone })
+    addFn({ name, address, phone })
     changeName('')
     changeAddress('')
     changePhone('')
@@ -36,9 +36,7 @@ export default props => {
         placeholder="Phone"
       />
       <div className="buttons">
-        <button onClick={() => addPerson()}>
-          Add
-        </button>
+        <button onClick={() => addPerson()}>Add</button>
       </div>
     </div>
   )

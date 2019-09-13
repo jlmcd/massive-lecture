@@ -18,7 +18,7 @@ function App() {
     updateClassList(newList)
   }
 
-  const addPerson = (newPerson) => {
+  const addPerson = newPerson => {
     axios.post('/api/class', newPerson).then(res => {
       updateClassList([...classList, res.data[0]])
     })
@@ -26,18 +26,20 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Class List</h1>
-      {classList.map(person => (
-        <Person
-          key={person.id}
-          id={person.id}
-          name={person.name}
-          address={person.address}
-          phone={person.phone}
-          deleteFn={() => deletePerson(person.id)}
-        />
-      ))}
-      <AddPerson addFn={addPerson} />
+      <h1>Sticky List</h1>
+      <div className="people">
+        {classList.map(person => (
+          <Person
+            key={person.id}
+            id={person.id}
+            name={person.name}
+            address={person.address}
+            phone={person.phone}
+            deleteFn={() => deletePerson(person.id)}
+          />
+        ))}
+        <AddPerson addFn={addPerson} />
+      </div>
     </div>
   )
 }

@@ -3,9 +3,9 @@ import axios from 'axios'
 
 export default ({ id, phone, name, address, deleteFn }) => {
   const [edit, toggleEdit] = useState(false)
-  const [newName, changeName] = useState(name)
-  const [newAddress, changeAddress] = useState(address)
-  const [newPhone, changePhone] = useState(phone)
+  const [newName, changeName] = useState(name || '')
+  const [newAddress, changeAddress] = useState(address || '')
+  const [newPhone, changePhone] = useState(phone || '')
 
   const saveData = () => {
     axios.put(`/api/class/${id}`, {
@@ -53,8 +53,7 @@ export default ({ id, phone, name, address, deleteFn }) => {
           <h2 className="content" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
             {newPhone}
           </h2>
-          <div className="buttosans">
-            <div className="placeholder"></div>
+          <div className="buttons">
             <button onClick={() => toggleEdit(true)}>Edit</button>
           </div>
         </>

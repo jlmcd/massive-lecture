@@ -1,18 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Massive Lecture Aid
 
-## Available Scripts
+# Purpose
+This repository contains a basic demonstration and boilerplate for `MassiveJS`
 
-In the project directory, you can run:
+# Setup
 
-### `npm start`
+1. Run `npm i` to install the necessary dependencies. They include:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    - express
+    - massive
+    - dotenv
+    - axios
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+2. Create a `.env` file with a `SERVER_PORT` variable (I use port 9000) and a `CONNECTION_STRING` variable.
 
-### `npm test`
+    - Ensure you append `?ssl=true` to the end of the `CONNECTION_STRING`.
+
+3. Run nodemon to start up the server.
+
+```NOTE: You won't need to ```
+
+## How to Use This Repo
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
