@@ -1,2 +1,0 @@
-SELECT * FROM wlh8
-ORDER BY id;
