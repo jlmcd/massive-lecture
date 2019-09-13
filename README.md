@@ -1,6 +1,6 @@
-Massive Lecture Aid
+# Massive Lecture Aid
 
-# Purpose
+## Purpose
 This repository contains a basic demonstration and boilerplate for `MassiveJS`. A front-end interface has been created to interact with basic CRUD operations. All of your logic will be in the server folder, with the provided `server.js` and `controller.js` files.
 
 ## Setup
