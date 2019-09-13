@@ -1,1 +1,2 @@
-SELECT * FROM wlh8;
+SELECT * FROM wlh8
+ORDER BY id;

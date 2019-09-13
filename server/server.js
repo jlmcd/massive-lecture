@@ -6,6 +6,7 @@ const ctrl = require('./controller')
 const {SERVER_PORT, CONNECTION_STRING} = process.env
 
 app.use(express.json())
+app.use(express.static(`${__dirname}/../build`));
 
 app.get('/api/class', ctrl.getClass)
 app.put('/api/class/:id', ctrl.updateClassmate)
