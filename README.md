@@ -41,5 +41,9 @@ app.use(express.static(`${__dirname}/../public/frontend`))
 3. Utilizing MassiveJS, create the logic necessary to read, create, update, and delete from the table you created in your database.
     - It is helpful to start each piece of logic in SQL Tabs and work your way backwards from there.
 
-### Notes for the Instructor
+## Notes for the Instructor
 Switch to the `finished` branch to find a working copy of the code.
+
+### Schema
+
+Drop the `seed.sql` file into SQL Tabs to get the appropriate table schema and dummy data.
